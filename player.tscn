@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://clrms1bshyyiq"]
+
+[ext_resource type="Texture2D" uid="uid://uilw728f8a30" path="res://Assets/Sprites/Characters/mouse_laser.png" id="1_ohdus"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ew48w"]
+radius = 18.0
+height = 70.0
+
+[node name="Player" type="CharacterBody2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="MouseLaser" type="Sprite2D" parent="."]
+scale = Vector2(0.33, 0.33)
+texture = ExtResource("1_ohdus")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_ew48w")

@@ -1,4 +1,9 @@
-TileMap
 CollisionShape2D
+Area2D
+Label
+CanvasLayer
+RigidBody2D
+StaticBody2D
+TileMap
 Camera2D
 CharacterBody2D

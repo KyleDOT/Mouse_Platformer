@@ -1,12 +1,19 @@
-[gd_scene load_steps=3 format=3 uid="uid://clrms1bshyyiq"]
+[gd_scene load_steps=5 format=3 uid="uid://clrms1bshyyiq"]
 
-[ext_resource type="Texture2D" uid="uid://uilw728f8a30" path="res://Assets/Sprites/Characters/mouse_laser.png" id="1_ohdus"]
+[ext_resource type="Texture2D" uid="uid://cdysssur81m0b" path="res://Assets/Sprites/Characters/mouse_laser.png" id="1_ohdus"]
+[ext_resource type="Script" path="res://player.gd" id="1_p1b4t"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ew48w"]
 radius = 18.0
 height = 70.0
 
-[node name="Player" type="CharacterBody2D"]
+[sub_resource type="LabelSettings" id="LabelSettings_7uf5i"]
+font_size = 24
+outline_size = 2
+outline_color = Color(0, 0, 0, 1)
+
+[node name="Player" type="CharacterBody2D" groups=["Player"]]
+script = ExtResource("1_p1b4t")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
@@ -16,3 +23,13 @@ texture = ExtResource("1_ohdus")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_ew48w")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ScoreText" type="Label" parent="CanvasLayer"]
+offset_left = 33.0
+offset_top = 21.0
+offset_right = 124.0
+offset_bottom = 58.0
+text = "Score: 0"
+label_settings = SubResource("LabelSettings_7uf5i")

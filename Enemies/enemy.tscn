@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://cuftgop3em15b"]
+
+[ext_resource type="Script" path="res://Enemies/Enemy.gd" id="1_btom3"]
+[ext_resource type="Texture2D" uid="uid://c3wsaq2vlx10p" path="res://Assets/Sprites/Characters/keycap_base_single.png" id="2_12ap8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iwq7s"]
+size = Vector2(37, 41)
+
+[node name="Enemy" type="Area2D"]
+script = ExtResource("1_btom3")
+
+[node name="KeycapBaseSingle" type="Sprite2D" parent="."]
+position = Vector2(0, -1.52588e-05)
+scale = Vector2(0.33, 0.33)
+texture = ExtResource("2_12ap8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_iwq7s")

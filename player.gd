@@ -3,9 +3,9 @@ extends CharacterBody2D
 var score : int = 0
 @onready var score_text : Label = get_node("CanvasLayer/ScoreText")
 
-var move_speed : float = 200
-var jump_force : float = 300
-var jump_double : float = 150
+var move_speed : float = 150
+var jump_force : float = 175
+var jump_double : float = 125
 var has_double_jump : bool = true
 var gravity : float = 500
 

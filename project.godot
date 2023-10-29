@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Mouse_Platformer"
-run/main_scene="res://Levels/Game.tscn"
+run/main_scene="res://Levels/LT.tscn"
 config/features=PackedStringArray("4.1", "Forward Plus")
 
 [autoload]
@@ -80,4 +80,5 @@ move_down={
 
 [rendering]
 
+textures/canvas_textures/default_texture_filter=0
 environment/defaults/default_clear_color=Color(0.137255, 0.137255, 0.137255, 1)

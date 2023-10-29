@@ -7,6 +7,7 @@
 size = Vector2(37, 41)
 
 [node name="Enemy" type="Area2D"]
+scale = Vector2(0.4, 0.4)
 script = ExtResource("1_btom3")
 
 [node name="KeycapBaseSingle" type="Sprite2D" parent="."]

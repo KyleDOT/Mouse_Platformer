@@ -1,14 +1,14 @@
 [gd_scene load_steps=9 format=3 uid="uid://brtatydrcwclp"]
 
-[ext_resource type="Texture2D" uid="uid://cav3l4tfj66p4" path="res://Assets/Sprites/Tiles/tiles_packed.png" id="1_78vuw"]
-[ext_resource type="PackedScene" uid="uid://clrms1bshyyiq" path="res://player.tscn" id="2_17t4i"]
-[ext_resource type="PackedScene" uid="uid://cuftgop3em15b" path="res://Enemies/enemy.tscn" id="3_68bjb"]
-[ext_resource type="PackedScene" uid="uid://bco6464abhsw6" path="res://Enemies/spikes.tscn" id="4_ja2ow"]
-[ext_resource type="PackedScene" uid="uid://dmy6a7s3jkycj" path="res://Items/coin.tscn" id="5_kcclq"]
-[ext_resource type="PackedScene" uid="uid://c4oh2h1glfits" path="res://Items/flag.tscn" id="6_siest"]
+[ext_resource type="Texture2D" uid="uid://cav3l4tfj66p4" path="res://Assets/Sprites/Tiles/tiles_packed.png" id="1_36n35"]
+[ext_resource type="PackedScene" uid="uid://clrms1bshyyiq" path="res://player.tscn" id="2_ygewv"]
+[ext_resource type="PackedScene" uid="uid://cuftgop3em15b" path="res://Enemies/enemy.tscn" id="3_s5x21"]
+[ext_resource type="PackedScene" uid="uid://bco6464abhsw6" path="res://Enemies/spikes.tscn" id="4_43kvc"]
+[ext_resource type="PackedScene" uid="uid://dmy6a7s3jkycj" path="res://Items/coin.tscn" id="5_xc5nv"]
+[ext_resource type="PackedScene" uid="uid://c4oh2h1glfits" path="res://Items/flag.tscn" id="6_71sbq"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_einp1"]
-texture = ExtResource("1_78vuw")
+texture = ExtResource("1_36n35")
 texture_region_size = Vector2i(18, 18)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
@@ -599,20 +599,20 @@ tile_set = SubResource("TileSet_12k30")
 format = 2
 layer_0/tile_data = PackedInt32Array(196606, 131073, 1, 196607, 131073, 1, 131072, 131073, 1, 131073, 131073, 1, 131074, 131073, 1, 131075, 131073, 1, 131076, 131073, 1, 131077, 131073, 1, 131078, 131073, 1, 262142, 131073, 6, 262143, 131073, 6, 196608, 131073, 6, 196609, 131073, 6, 196610, 131073, 6, 262146, 131073, 6, 262147, 131073, 6, 262145, 131073, 6, 262144, 131073, 6, 196611, 131073, 6, 196612, 131073, 6, 196613, 131073, 6, 196614, 131073, 6, 262150, 131073, 6, 262149, 131073, 6, 262148, 131073, 6, 327679, 131073, 6, 327678, 131073, 6, -65523, 131073, 1, -65524, 131073, 1, -65525, 131073, 1, -65526, 131073, 1, -65527, 131073, 1, -65528, 131073, 1, 8, 131073, 6, 9, 131073, 6, 10, 131073, 6, 11, 131073, 6, 12, 131073, 6, 13, 131073, 6, -6, 131073, 1, -7, 131073, 1, -8, 131073, 1, -9, 131073, 1, -10, 131073, 1, 65526, 131073, 6, 65527, 131073, 6, 65528, 131073, 6, 65529, 131073, 6, 65530, 131073, 6)
 
-[node name="Player" parent="." instance=ExtResource("2_17t4i")]
+[node name="Player" parent="." instance=ExtResource("2_ygewv")]
 position = Vector2(0, -8)
 
-[node name="Enemy" parent="." instance=ExtResource("3_68bjb")]
+[node name="Enemy" parent="." instance=ExtResource("3_s5x21")]
 position = Vector2(250, -40)
 input_letter = "K"
 move_dir = Vector2(-100, 0)
 
-[node name="Spikes" parent="." instance=ExtResource("4_ja2ow")]
+[node name="Spikes" parent="." instance=ExtResource("4_43kvc")]
 
-[node name="Coin" parent="." instance=ExtResource("5_kcclq")]
+[node name="Coin" parent="." instance=ExtResource("5_xc5nv")]
 position = Vector2(90, 8)
 
-[node name="Flag" parent="." instance=ExtResource("6_siest")]
+[node name="Flag" parent="." instance=ExtResource("6_71sbq")]
 position = Vector2(-230, -49)
 next_scene = "res://Levels/L2.tscn"
 

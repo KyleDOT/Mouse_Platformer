@@ -6,3 +6,7 @@ res://player.gd
 res://global.gd
 res://Items/coin.gd
 res://Levels/L2.tscn
+res://Levels/L1.tscn
+res://Levels/L3.tscn
+res://player.tscn
+res://Levels/LT.tscn

@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://bco6464abhsw6"]
+
+[ext_resource type="Script" path="res://Enemies/Mousetrap_Real.gd" id="1_ihw5a"]
+[ext_resource type="Texture2D" uid="uid://o16f3w8chd4t" path="res://Assets/Sprites/Objects/mouse_trap_real.png" id="2_a2p2o"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6huav"]
+size = Vector2(146, 52)
+
+[node name="Mousetrap_Real" type="Area2D"]
+scale = Vector2(0.2, 0.2)
+script = ExtResource("1_ihw5a")
+
+[node name="Tile0068" type="Sprite2D" parent="."]
+position = Vector2(0, -73)
+texture = ExtResource("2_a2p2o")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -26)
+shape = SubResource("RectangleShape2D_6huav")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -7,7 +7,7 @@
 size = Vector2(37, 41)
 
 [node name="Enemy" type="Area2D"]
-scale = Vector2(0.4, 0.4)
+scale = Vector2(0.45, 0.45)
 script = ExtResource("1_btom3")
 
 [node name="KeycapBaseSingle" type="Sprite2D" parent="."]
@@ -17,3 +17,5 @@ texture = ExtResource("2_12ap8")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_iwq7s")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

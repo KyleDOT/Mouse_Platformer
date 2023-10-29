@@ -13,6 +13,7 @@ func _physics_process(delta):
 	#Gravity
 	if not is_on_floor():
 		velocity.y += gravity * delta
+	else:
 		has_double_jump = true
 	
 	#Left / Right movement
@@ -26,8 +27,10 @@ func _physics_process(delta):
 	#Jumping
 	if Input.is_action_just_pressed("move_up"):
 		if is_on_floor():
+			#single/initial jump
 			velocity.y -= jump_force
 		elif has_double_jump:
+			#double jump
 			velocity.y -= jump_double
 			has_double_jump = false
 		

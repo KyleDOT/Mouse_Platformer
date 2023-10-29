@@ -1,8 +1,8 @@
+res://Enemies/enemy.tscn
+res://Enemies/Enemy.gd
 res://Menu.tscn
 res://Levels/Game.tscn
-res://player.tscn
-res://Enemies/enemy.tscn
-res://Items/coin.tscn
-res://Items/flag.tscn
-res://Levels/L2.tscn
 res://player.gd
+res://global.gd
+res://Items/coin.gd
+res://Levels/L2.tscn

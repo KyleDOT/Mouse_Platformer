@@ -1,24 +1,25 @@
 extends Area2D
 
+#Defining keycap letter & loading relevant files
 @export var input_letter: String = "A"
 @onready var path_left: String = "res://Assets/Sprites/Characters/keycaps/keycap_" + input_letter + "_left.png"
 @onready var path_right: String = "res://Assets/Sprites/Characters/keycaps/keycap_" + input_letter + "_right.png"
 @onready var keycap_left = load(path_left)
 @onready var keycap_right = load(path_right)
 
+#Enemy stats
 @export var move_speed : float = 25
 @export var move_dir : Vector2
 
+#Enemy patrol
 var start_pos : Vector2
 var target_pos : Vector2
 
 func _ready():
-
 	start_pos = global_position
 	target_pos = start_pos + move_dir
-	print(path_left)
-	print(path_right)
 	
+	#Initial facing
 	if target_pos.x < start_pos.x:
 		$KeycapBaseSingle.set_texture(keycap_left)
 	else:

@@ -8,3 +8,4 @@ res://Enemies/enemy.tscn
 res://player.gd
 res://Enemies/spikes.tscn
 res://Enemies/Mousetrap_Real.tscn
+res://Enemies/Kill_Box.tscn

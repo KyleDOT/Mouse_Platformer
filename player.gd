@@ -7,7 +7,7 @@ var score : int = 0
 #Player movement
 var move_speed : float = 150
 var jump_force : float = 175
-var jump_double : float = 125
+var jump_double : float = 150
 var has_double_jump : bool = true
 var gravity : float = 500
 var direction : Vector2 = Vector2.ZERO

@@ -9,3 +9,9 @@ res://player.gd
 res://Enemies/spikes.tscn
 res://Enemies/Mousetrap_Real.tscn
 res://Enemies/Kill_Box.tscn
+res://Game.tscn
+res://pause_menu.tscn
+res://Game.gd
+res://pause_menu.gd
+res://GameManager.gd
+res://credits.tscn

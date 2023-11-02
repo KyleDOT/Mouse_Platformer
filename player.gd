@@ -26,7 +26,8 @@ func _physics_process(delta):
 		velocity.x = direction.x * move_speed
 	else:
 		velocity.x = move_toward(velocity.x, 0, move_speed)
-		
+	move_and_slide()
+	
 	#Jumping
 	if Input.is_action_just_pressed("move_up"):
 		if is_on_floor():
@@ -36,9 +37,10 @@ func _physics_process(delta):
 			#double jump
 			velocity.y -= jump_double
 			has_double_jump = false
-	
-	move_and_slide()
 	update_facing_direction()
+	
+	if Input.is_action_just_pressed("attack"):
+		pass
 
 func game_over ():
 	get_tree().reload_current_scene()

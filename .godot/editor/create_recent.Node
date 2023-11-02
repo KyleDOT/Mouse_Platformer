@@ -1,7 +1,14 @@
-CollisionShape2D
-Area2D
+RichTextLabel
+Panel
+Control
+VBoxContainer
+GridContainer
+Button
 Label
 CanvasLayer
+Node
+CollisionShape2D
+Area2D
 RigidBody2D
 StaticBody2D
 TileMap

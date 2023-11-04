@@ -1,0 +1,15 @@
+res://Enemies/enemy.tscn::68a411e5f1bc8b8d7faaf1700ec981f2::1699090407::res://.godot/exported/133200997/export-ea09a7a9bae2256955b1ef54748fdfa6-enemy.scn
+res://Enemies/Kill_Box.tscn::699a4c5a9e2d0c4d0a30a054544f1eac::1699088582::res://.godot/exported/133200997/export-d51d5fb0c65e4e7b9fb4daf1d33b5247-Kill_Box.scn
+res://Enemies/Mousetrap_Real.tscn::2208f1477c116db825793ef546ca81d5::1699088582::res://.godot/exported/133200997/export-278f6279306dd308504289e8a1a3fa9c-Mousetrap_Real.scn
+res://Items/coin.tscn::511f47a19e9c170ce7647a48da3aac3c::1698460634::res://.godot/exported/133200997/export-b4fc019d70184ff7afa36fb7a15c75b8-coin.scn
+res://Items/flag.tscn::317dfe84c9749cdce6b8b050ff3bc41e::1698460634::res://.godot/exported/133200997/export-8ea8c7ef69bbe2290430d6e2b7a438da-flag.scn
+res://Levels/L1.tscn::72c29382caf5c727789a7ccb1203bf77::1699088582::res://.godot/exported/133200997/export-5b366c8172c742005c6b2230ac59f9f8-L1.scn
+res://Levels/L2.tscn::1eca17743549e823cda81dc3d63f009a::1699088582::res://.godot/exported/133200997/export-da91d2f0ba9d50fcb98725740fc23009-L2.scn
+res://Levels/L3.tscn::d84f34997d9945d511d792f564751e13::1699088582::res://.godot/exported/133200997/export-36df56888eb63c0e814bf5680fa50a0d-L3.scn
+res://Levels/LT.tscn::fa425eee54669846e12e2aaeb1ed1249::1698921751::res://.godot/exported/133200997/export-49ce5c742ead3b192333d02d61d2eafc-LT.scn
+res://Menus/credits.tscn::fe26573dc3fef07a69cf10f118cef006::1699088582::res://.godot/exported/133200997/export-60d17d94ce93af4ceb04f4ec547c339e-credits.scn
+res://Menus/pause_menu.tscn::5984d7ff1d8d18af3c6cb568eca47142::1699088582::res://.godot/exported/133200997/export-6a77583c97d240c3003239e3051aad3f-pause_menu.scn
+res://Player/bullet.tscn::ddc9ea055ddf3453d0684f546d6ce455::1699068649::res://.godot/exported/133200997/export-6dd23c115fe37d07d4eed2f5dd25d7d0-bullet.scn
+res://Player/player.tscn::f43b41ec0d23445f633dee53c7a77a47::1699090451::res://.godot/exported/133200997/export-d267b47f7e81a3258979164d56d0d9c2-player.scn
+res://Game.tscn::93bbb03e66c28f07754c5fbb1d7ee127::1699088842::res://.godot/exported/133200997/export-6455994a605b35b7d96f8362f3055c4a-Game.scn
+res://main_menu.tscn::53bcf1283daad5113c0961481463b3cd::1699088582::res://.godot/exported/133200997/export-8b03550a1e82db90fe95208a9e9dbb82-main_menu.scn

@@ -11,7 +11,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_k0bsb")
-game_manager = NodePath("")
 metadata/_edit_horizontal_guides_ = []
 metadata/_edit_vertical_guides_ = []
 
@@ -46,10 +45,16 @@ horizontal_alignment = 1
 layout_mode = 2
 text = "Resume"
 
+[node name="Main" type="Button" parent="Panel/VBoxContainer"]
+layout_mode = 2
+text = "Main Menu"
+
 [node name="Quit" type="Button" parent="Panel/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "Quit"
 
 [connection signal="pressed" from="Panel/VBoxContainer/Resume" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="Panel/VBoxContainer/Main" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="Panel/VBoxContainer/Main" to="." method="_on_main_pressed"]
 [connection signal="pressed" from="Panel/VBoxContainer/Quit" to="." method="_on_quit_pressed"]

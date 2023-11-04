@@ -10,6 +10,8 @@ extends Area2D
 #Enemy stats
 @export var move_speed : float = 25
 @export var move_dir : Vector2
+var health : int = 3
+var melee_damage : int = 1
 
 #Enemy patrol
 var start_pos : Vector2
@@ -38,7 +40,4 @@ func _process(delta):
 
 func _on_body_entered(body):
 	if body.is_in_group("Player"):
-		body.game_over()
-
-func _on_detection_body_entered(body):
-	pass # Replace with function body.
+		body.damage(melee_damage)

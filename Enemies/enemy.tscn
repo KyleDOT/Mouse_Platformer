@@ -21,6 +21,7 @@ texture = ExtResource("2_12ap8")
 shape = SubResource("RectangleShape2D_iwq7s")
 
 [node name="Detection" type="Area2D" parent="."]
+visible = false
 
 [node name="DetectionArea" type="CollisionShape2D" parent="Detection"]
 scale = Vector2(25, 25)

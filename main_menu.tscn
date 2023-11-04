@@ -7,110 +7,118 @@
 
 [node name="MainMenu" type="Node2D"]
 script = ExtResource("1_qs48q")
+metadata/_edit_vertical_guides_ = [959.0]
 
 [node name="Play" type="Node" parent="."]
 
 [node name="P" parent="Play" instance=ExtResource("1_whaie")]
-position = Vector2(459, 326)
+position = Vector2(843, 332)
 scale = Vector2(2, 2)
 input_letter = "P"
 
 [node name="L" parent="Play" instance=ExtResource("1_whaie")]
-position = Vector2(538, 327)
+position = Vector2(922, 333)
 scale = Vector2(2, 2)
 input_letter = "L"
 
 [node name="A" parent="Play" instance=ExtResource("1_whaie")]
-position = Vector2(616, 327)
+position = Vector2(1000, 333)
 scale = Vector2(2, 2)
 
 [node name="Y" parent="Play" instance=ExtResource("1_whaie")]
-position = Vector2(695, 326)
+position = Vector2(1079, 332)
 scale = Vector2(2, 2)
 input_letter = "Y"
 
 [node name="Play_Button" type="Button" parent="Play"]
 modulate = Color(1, 1, 1, 0)
-offset_left = 417.0
-offset_top = 277.0
-offset_right = 738.0
-offset_bottom = 376.0
+offset_left = 801.0
+offset_top = 283.0
+offset_right = 1122.0
+offset_bottom = 382.0
 theme = SubResource("Theme_i5sxu")
+metadata/_edit_use_anchors_ = true
 
 [node name="Credits" type="Node" parent="."]
 
 [node name="C" parent="Credits" instance=ExtResource("1_whaie")]
-position = Vector2(74, 561)
+position = Vector2(724, 553)
 scale = Vector2(2, 2)
 input_letter = "C"
 
 [node name="R" parent="Credits" instance=ExtResource("1_whaie")]
-position = Vector2(152, 561)
+position = Vector2(802, 553)
 scale = Vector2(2, 2)
 input_letter = "R"
 
 [node name="E" parent="Credits" instance=ExtResource("1_whaie")]
-position = Vector2(231, 561)
+position = Vector2(881, 553)
 scale = Vector2(2, 2)
 input_letter = "E"
 
 [node name="D" parent="Credits" instance=ExtResource("1_whaie")]
-position = Vector2(309, 561)
+position = Vector2(959, 553)
 scale = Vector2(2, 2)
 input_letter = "D"
 
 [node name="I" parent="Credits" instance=ExtResource("1_whaie")]
-position = Vector2(388, 561)
+position = Vector2(1038, 553)
 scale = Vector2(2, 2)
 input_letter = "I"
 
 [node name="T" parent="Credits" instance=ExtResource("1_whaie")]
-position = Vector2(466, 560)
+position = Vector2(1116, 552)
 scale = Vector2(2, 2)
 input_letter = "T"
 
 [node name="S" parent="Credits" instance=ExtResource("1_whaie")]
-position = Vector2(545, 559)
+position = Vector2(1195, 551)
 scale = Vector2(2, 2)
 input_letter = "S"
 
 [node name="Credits_Button" type="Button" parent="Credits"]
 modulate = Color(1, 1, 1, 0)
-offset_left = 32.0
-offset_top = 512.0
-offset_right = 588.0
-offset_bottom = 611.0
+offset_left = 682.0
+offset_top = 504.0
+offset_right = 1238.0
+offset_bottom = 603.0
 theme = SubResource("Theme_i5sxu")
+metadata/_edit_use_anchors_ = true
 
 [node name="Quit" type="Node" parent="."]
 
 [node name="Q" parent="Quit" instance=ExtResource("1_whaie")]
-position = Vector2(854, 572)
+position = Vector2(841, 775)
 scale = Vector2(2, 2)
 input_letter = "Q"
 
 [node name="U" parent="Quit" instance=ExtResource("1_whaie")]
-position = Vector2(931, 572)
+position = Vector2(918, 775)
 scale = Vector2(2, 2)
 input_letter = "U"
 
 [node name="I" parent="Quit" instance=ExtResource("1_whaie")]
-position = Vector2(1008, 571)
+position = Vector2(995, 774)
 scale = Vector2(2, 2)
 input_letter = "I"
 
 [node name="T" parent="Quit" instance=ExtResource("1_whaie")]
-position = Vector2(1084, 571)
+position = Vector2(1071, 774)
 scale = Vector2(2, 2)
 input_letter = "T"
 
 [node name="Quit_Button" type="Button" parent="Quit"]
 modulate = Color(1, 1, 1, 0)
-offset_left = 811.0
-offset_top = 527.0
-offset_right = 1132.0
-offset_bottom = 626.0
+offset_left = 798.0
+offset_top = 730.0
+offset_right = 1119.0
+offset_bottom = 829.0
 theme = SubResource("Theme_i5sxu")
+metadata/_edit_use_anchors_ = true
+
+[node name="Container" type="Container" parent="."]
+offset_right = 1924.0
+offset_bottom = 40.0
 
 [connection signal="pressed" from="Play/Play_Button" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="Play/Play_Button" to="Play/Play_Button" method="_on_pressed"]

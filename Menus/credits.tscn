@@ -1,3 +1,155 @@
-[gd_scene format=3 uid="uid://x1483s1p4cwf"]
+[gd_scene load_steps=8 format=3 uid="uid://x1483s1p4cwf"]
+
+[ext_resource type="Script" path="res://Menus/Credits.gd" id="1_qwyjg"]
+[ext_resource type="Texture2D" uid="uid://c2ics0edp88jo" path="res://Assets/Social/github_light.png" id="2_7wn3d"]
+[ext_resource type="Texture2D" uid="uid://bg3yji4oaddtd" path="res://Assets/Social/web_light.png" id="3_88yut"]
+[ext_resource type="PackedScene" uid="uid://cuftgop3em15b" path="res://Enemies/enemy.tscn" id="3_cbu7k"]
+[ext_resource type="Texture2D" uid="uid://dprtu8wgifyo8" path="res://Assets/Social/itchio_light.png" id="4_dnpen"]
+[ext_resource type="Texture2D" uid="uid://cgvnisj8l2or3" path="res://Assets/Social/instagram.png" id="5_rmyfc"]
+
+[sub_resource type="Theme" id="Theme_jmqvk"]
 
 [node name="Node2D" type="Node2D"]
+position = Vector2(576, 324)
+metadata/_edit_vertical_guides_ = [969.0]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_qwyjg")
+
+[node name="Panel" type="Panel" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Main Credits" type="RichTextLabel" parent="Control/Panel"]
+layout_mode = 0
+offset_left = -552.0
+offset_top = -300.0
+offset_right = 369.0
+offset_bottom = 582.0
+theme_override_font_sizes/normal_font_size = 28
+theme_override_font_sizes/bold_font_size = 32
+bbcode_enabled = true
+text = "[b]KyleDOT - [/b]
+Programming, level & character art, level design
+
+[b]Ida (Moonloaf) - [/b]
+Voice acting
+
+[b]Alex - [/b]
+Voice acting"
+
+[node name="Playtesters" type="RichTextLabel" parent="Control/Panel"]
+layout_mode = 0
+offset_left = 412.0
+offset_top = -300.0
+offset_right = 1333.0
+offset_bottom = 582.0
+theme_override_font_sizes/normal_font_size = 28
+theme_override_font_sizes/bold_font_size = 32
+bbcode_enabled = true
+text = "[b]Playtesters[/b]
+Gazure
+IMIDY
+"
+
+[node name="Kyle" type="Node" parent="Control/Panel"]
+
+[node name="Kyle_Web" type="Button" parent="Control/Panel/Kyle"]
+offset_left = 196.0
+offset_top = 28.0
+offset_right = 466.0
+offset_bottom = 292.0
+scale = Vector2(0.15, 0.15)
+icon = ExtResource("3_88yut")
+
+[node name="Kyle_ItchIO" type="Button" parent="Control/Panel/Kyle"]
+offset_left = 239.0
+offset_top = 28.0
+offset_right = 509.0
+offset_bottom = 292.0
+scale = Vector2(0.15, 0.15)
+icon = ExtResource("4_dnpen")
+
+[node name="Kyle_Github" type="Button" parent="Control/Panel/Kyle"]
+offset_left = 282.0
+offset_top = 28.0
+offset_right = 552.0
+offset_bottom = 292.0
+scale = Vector2(0.15, 0.15)
+icon = ExtResource("2_7wn3d")
+
+[node name="Kyle_Instagram" type="Button" parent="Control/Panel/Kyle"]
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -635.0
+offset_top = -512.0
+offset_right = -371.0
+offset_bottom = -248.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.15, 0.15)
+icon = ExtResource("5_rmyfc")
+
+[node name="Ida" type="Node" parent="Control/Panel"]
+
+[node name="Menu" type="Node" parent="Control/Panel"]
+
+[node name="M" parent="Control/Panel/Menu" instance=ExtResource("3_cbu7k")]
+position = Vector2(853, 996)
+scale = Vector2(2, 2)
+input_letter = "M"
+
+[node name="E" parent="Control/Panel/Menu" instance=ExtResource("3_cbu7k")]
+position = Vector2(930, 996)
+scale = Vector2(2, 2)
+input_letter = "E"
+
+[node name="N" parent="Control/Panel/Menu" instance=ExtResource("3_cbu7k")]
+position = Vector2(1007, 995)
+scale = Vector2(2, 2)
+input_letter = "N"
+
+[node name="U" parent="Control/Panel/Menu" instance=ExtResource("3_cbu7k")]
+position = Vector2(1083, 995)
+scale = Vector2(2, 2)
+input_letter = "U"
+
+[node name="Menu_Button" type="Button" parent="Control/Panel/Menu"]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = -1
+anchor_top = -0.00555556
+anchor_bottom = -0.00555556
+offset_left = 810.0
+offset_top = 951.0
+offset_right = 1131.0
+offset_bottom = 1050.0
+theme = SubResource("Theme_jmqvk")
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="Control/Panel/Kyle/Kyle_Web" to="Control" method="_on_button_pressed"]
+[connection signal="pressed" from="Control/Panel/Kyle/Kyle_Web" to="Control" method="_on_github_pressed"]
+[connection signal="pressed" from="Control/Panel/Kyle/Kyle_Web" to="Control" method="_on_kyle_web_pressed"]
+[connection signal="pressed" from="Control/Panel/Kyle/Kyle_ItchIO" to="Control" method="_on_button_pressed"]
+[connection signal="pressed" from="Control/Panel/Kyle/Kyle_ItchIO" to="Control" method="_on_kyle_itch_io_pressed"]
+[connection signal="pressed" from="Control/Panel/Kyle/Kyle_ItchIO" to="Control" method="_on_github_pressed"]
+[connection signal="pressed" from="Control/Panel/Kyle/Kyle_Github" to="Control" method="_on_button_pressed"]
+[connection signal="pressed" from="Control/Panel/Kyle/Kyle_Github" to="Control" method="_on_github_pressed"]
+[connection signal="pressed" from="Control/Panel/Kyle/Kyle_Github" to="Control" method="_on_kyle_github_pressed"]
+[connection signal="pressed" from="Control/Panel/Kyle/Kyle_Instagram" to="Control" method="_on_button_pressed"]
+[connection signal="pressed" from="Control/Panel/Kyle/Kyle_Instagram" to="Control" method="_on_github_pressed"]
+[connection signal="pressed" from="Control/Panel/Kyle/Kyle_Instagram" to="Control" method="_on_kyle_instagram_pressed"]
+[connection signal="pressed" from="Control/Panel/Menu/Menu_Button" to="Control" method="_on_menu_button_pressed"]
+[connection signal="pressed" from="Control/Panel/Menu/Menu_Button" to="Control/Panel/Menu/Menu_Button" method="_on_pressed"]

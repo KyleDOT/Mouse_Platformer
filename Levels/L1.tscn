@@ -725,19 +725,19 @@ layer_0/tile_data = PackedInt32Array(65534, 262144, 0, 65535, 262144, 0, 0, 2621
 position = Vector2(-35, -203)
 
 [node name="Enemy_H" parent="." instance=ExtResource("3_mdufo")]
-position = Vector2(343, -10)
+position = Vector2(69, -89)
 input_letter = "H"
-move_dir = Vector2(-150, 0)
+move_dir = Vector2(-50, 0)
 
 [node name="Enemy_I" parent="." instance=ExtResource("3_mdufo")]
-position = Vector2(360, -10)
+position = Vector2(86, -89)
 input_letter = "I"
-move_dir = Vector2(-167, 0)
+move_dir = Vector2(-50, 0)
 
 [node name="Enemy_K" parent="." instance=ExtResource("3_mdufo")]
-position = Vector2(90, -90)
+position = Vector2(502, -9)
 input_letter = "K"
-move_dir = Vector2(-65, 0)
+move_dir = Vector2(-300, 0)
 
 [node name="Mousetrap_Real" parent="." instance=ExtResource("4_87q2r")]
 position = Vector2(-19, 160)
@@ -759,4 +759,4 @@ position = Vector2(1831, 1013)
 scale = Vector2(8.47973, 0.421538)
 
 [node name="Flag" parent="." instance=ExtResource("6_o6yfr")]
-position = Vector2(171, -77)
+position = Vector2(258, -77)

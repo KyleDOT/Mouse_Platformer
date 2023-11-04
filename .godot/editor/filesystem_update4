@@ -17,3 +17,5 @@ res://main_menu.gd
 res://Items/flag.gd
 res://Menus/Quit_Button.gd
 res://Enemies/Enemy.gd
+res://Menus/Credits.gd
+res://Player/HealthBar.gd

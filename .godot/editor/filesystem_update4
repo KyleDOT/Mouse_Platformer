@@ -13,3 +13,7 @@ res://Menus/Play_Button.gd
 res://GameManager.gd
 res://Player/player.gd
 res://Menus/pause_menu.gd
+res://main_menu.gd
+res://Items/flag.gd
+res://Menus/Quit_Button.gd
+res://Enemies/Enemy.gd

@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://ba644ruicyd8y"]
+[gd_scene load_steps=6 format=3 uid="uid://ba644ruicyd8y"]
 
 [ext_resource type="Texture2D" uid="uid://nxl1rmxby81" path="res://Assets/Sprites/Tiles/tile_set.png" id="1_6ywd3"]
 [ext_resource type="PackedScene" uid="uid://clrms1bshyyiq" path="res://Player/player.tscn" id="2_o86xj"]
+[ext_resource type="PackedScene" uid="uid://c4oh2h1glfits" path="res://Items/flag.tscn" id="3_mjxtg"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_72lsg"]
 texture = ExtResource("1_6ywd3")
@@ -657,3 +658,6 @@ layer_0/tile_data = PackedInt32Array(65534, 720896, 5, 65535, 720896, 5, 0, 7208
 
 [node name="Player" parent="." instance=ExtResource("2_o86xj")]
 position = Vector2(28, -21)
+
+[node name="Flag" parent="." instance=ExtResource("3_mjxtg")]
+position = Vector2(975, -97)

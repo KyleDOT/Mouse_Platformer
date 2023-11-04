@@ -1,3 +1,5 @@
+CollisionShape2D
+Area2D
 AnimationPlayer
 TextureRect
 Node2D
@@ -6,7 +8,6 @@ Node
 Control
 CollisionPolygon2D
 Sprite2D
-CollisionShape2D
 RigidBody2D
 RichTextLabel
 Panel
@@ -14,7 +15,6 @@ VBoxContainer
 GridContainer
 Label
 CanvasLayer
-Area2D
 StaticBody2D
 TileMap
 Camera2D

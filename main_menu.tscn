@@ -1,0 +1,123 @@
+[gd_scene load_steps=7 format=3 uid="uid://cxj36t2a4a820"]
+
+[ext_resource type="PackedScene" uid="uid://cuftgop3em15b" path="res://Enemies/enemy.tscn" id="1_whaie"]
+[ext_resource type="Script" path="res://Menus/Play_Button.gd" id="2_026jg"]
+[ext_resource type="Script" path="res://Menus/Credits_Button.gd" id="3_1dn7b"]
+[ext_resource type="Script" path="res://Menus/Quit_Button.gd" id="3_gxhy2"]
+[ext_resource type="PackedScene" uid="uid://noiil64gjhww" path="res://Levels/L1.tscn" id="3_omst6"]
+
+[sub_resource type="Theme" id="Theme_i5sxu"]
+
+[node name="MainMenu" type="Node2D"]
+
+[node name="Play" type="Node" parent="."]
+
+[node name="P" parent="Play" instance=ExtResource("1_whaie")]
+position = Vector2(459, 326)
+scale = Vector2(2, 2)
+input_letter = "P"
+
+[node name="L" parent="Play" instance=ExtResource("1_whaie")]
+position = Vector2(538, 327)
+scale = Vector2(2, 2)
+input_letter = "L"
+
+[node name="A" parent="Play" instance=ExtResource("1_whaie")]
+position = Vector2(616, 327)
+scale = Vector2(2, 2)
+
+[node name="Y" parent="Play" instance=ExtResource("1_whaie")]
+position = Vector2(695, 326)
+scale = Vector2(2, 2)
+input_letter = "Y"
+
+[node name="Play_Button" type="Button" parent="Play"]
+modulate = Color(1, 1, 1, 0)
+offset_left = 417.0
+offset_top = 277.0
+offset_right = 738.0
+offset_bottom = 376.0
+theme = SubResource("Theme_i5sxu")
+script = ExtResource("2_026jg")
+scene_to_load = ExtResource("3_omst6")
+
+[node name="Credits" type="Node" parent="."]
+
+[node name="C" parent="Credits" instance=ExtResource("1_whaie")]
+position = Vector2(74, 561)
+scale = Vector2(2, 2)
+input_letter = "C"
+
+[node name="R" parent="Credits" instance=ExtResource("1_whaie")]
+position = Vector2(152, 561)
+scale = Vector2(2, 2)
+input_letter = "R"
+
+[node name="E" parent="Credits" instance=ExtResource("1_whaie")]
+position = Vector2(231, 561)
+scale = Vector2(2, 2)
+input_letter = "E"
+
+[node name="D" parent="Credits" instance=ExtResource("1_whaie")]
+position = Vector2(309, 561)
+scale = Vector2(2, 2)
+input_letter = "D"
+
+[node name="I" parent="Credits" instance=ExtResource("1_whaie")]
+position = Vector2(388, 561)
+scale = Vector2(2, 2)
+input_letter = "I"
+
+[node name="T" parent="Credits" instance=ExtResource("1_whaie")]
+position = Vector2(466, 560)
+scale = Vector2(2, 2)
+input_letter = "T"
+
+[node name="S" parent="Credits" instance=ExtResource("1_whaie")]
+position = Vector2(545, 559)
+scale = Vector2(2, 2)
+input_letter = "S"
+
+[node name="Credits_Button" type="Button" parent="Credits"]
+modulate = Color(1, 1, 1, 0)
+offset_left = 32.0
+offset_top = 512.0
+offset_right = 588.0
+offset_bottom = 611.0
+theme = SubResource("Theme_i5sxu")
+script = ExtResource("3_1dn7b")
+
+[node name="Quit" type="Node" parent="."]
+
+[node name="Q" parent="Quit" instance=ExtResource("1_whaie")]
+position = Vector2(854, 572)
+scale = Vector2(2, 2)
+input_letter = "Q"
+
+[node name="U" parent="Quit" instance=ExtResource("1_whaie")]
+position = Vector2(931, 572)
+scale = Vector2(2, 2)
+input_letter = "U"
+
+[node name="I" parent="Quit" instance=ExtResource("1_whaie")]
+position = Vector2(1008, 571)
+scale = Vector2(2, 2)
+input_letter = "I"
+
+[node name="T" parent="Quit" instance=ExtResource("1_whaie")]
+position = Vector2(1084, 571)
+scale = Vector2(2, 2)
+input_letter = "T"
+
+[node name="Quit_Button" type="Button" parent="Quit"]
+modulate = Color(1, 1, 1, 0)
+offset_left = 811.0
+offset_top = 527.0
+offset_right = 1132.0
+offset_bottom = 626.0
+theme = SubResource("Theme_i5sxu")
+script = ExtResource("3_gxhy2")
+
+[connection signal="pressed" from="Play/Play_Button" to="Play/Play_Button" method="_on_pressed"]
+[connection signal="pressed" from="Credits/Credits_Button" to="Credits/Credits_Button" method="_on_pressed"]
+[connection signal="pressed" from="Quit/Quit_Button" to="Quit/Quit_Button" method="_on_pressed"]

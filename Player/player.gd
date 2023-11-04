@@ -1,9 +1,5 @@
 extends CharacterBody2D
 
-#HUD
-var score : int = 0
-@onready var score_text : Label = get_node("CanvasLayer/ScoreText")
-
 #Player movement
 var move_speed : float = 150
 var jump_force : float = 175
@@ -44,10 +40,6 @@ func _physics_process(delta):
 
 func game_over ():
 	get_tree().reload_current_scene()
-	
-func add_score (amount):
-	score += amount
-	score_text.text = str("Score: ", score)
 
 func update_facing_direction ():
 	if direction.x > 0:

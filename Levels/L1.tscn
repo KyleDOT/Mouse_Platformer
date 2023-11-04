@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://noiil64gjhww"]
 
 [ext_resource type="Texture2D" uid="uid://nxl1rmxby81" path="res://Assets/Sprites/Tiles/tile_set.png" id="1_t4x5g"]
-[ext_resource type="PackedScene" uid="uid://clrms1bshyyiq" path="res://player.tscn" id="2_do56k"]
+[ext_resource type="PackedScene" uid="uid://clrms1bshyyiq" path="res://Player/player.tscn" id="2_do56k"]
 [ext_resource type="PackedScene" uid="uid://cuftgop3em15b" path="res://Enemies/enemy.tscn" id="3_mdufo"]
 [ext_resource type="PackedScene" uid="uid://bco6464abhsw6" path="res://Enemies/Mousetrap_Real.tscn" id="4_87q2r"]
 [ext_resource type="PackedScene" uid="uid://cjgdmpkn2ccvv" path="res://Enemies/Kill_Box.tscn" id="5_iv41w"]
@@ -711,6 +711,7 @@ physics_layer_0/physics_material = SubResource("PhysicsMaterial_q0rmc")
 sources/0 = SubResource("TileSetAtlasSource_72lsg")
 
 [node name="Node2D" type="Node2D"]
+process_mode = 1
 
 [node name="Bottom tiles" type="TileMap" parent="."]
 position = Vector2(-2, 0)

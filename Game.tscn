@@ -1,21 +1,15 @@
-[gd_scene load_steps=6 format=3 uid="uid://bi6bnj6u6hqn"]
+[gd_scene load_steps=4 format=3 uid="uid://bi6bnj6u6hqn"]
 
 [ext_resource type="Script" path="res://GameManager.gd" id="1_6gbnp"]
-[ext_resource type="PackedScene" uid="uid://noiil64gjhww" path="res://Levels/L1.tscn" id="1_ee8ku"]
-[ext_resource type="PackedScene" uid="uid://ba644ruicyd8y" path="res://Levels/L2.tscn" id="2_8qwko"]
-[ext_resource type="PackedScene" uid="uid://dllwhteadvxck" path="res://Levels/L3.tscn" id="3_v1kn3"]
-[ext_resource type="PackedScene" uid="uid://5d3auujlure8" path="res://pause_menu.tscn" id="4_urq0w"]
+[ext_resource type="PackedScene" uid="uid://cxj36t2a4a820" path="res://main_menu.tscn" id="2_me5he"]
+[ext_resource type="PackedScene" uid="uid://5d3auujlure8" path="res://Menus/pause_menu.tscn" id="4_urq0w"]
 
 [node name="GameManager" type="Node"]
 process_mode = 3
 script = ExtResource("1_6gbnp")
 
-[node name="Level 1" parent="." instance=ExtResource("1_ee8ku")]
-process_mode = 1
-
-[node name="Level 2" parent="." instance=ExtResource("2_8qwko")]
-
-[node name="Level 3" parent="." instance=ExtResource("3_v1kn3")]
+[node name="MainMenu" parent="." instance=ExtResource("2_me5he")]
+process_mode = 3
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 

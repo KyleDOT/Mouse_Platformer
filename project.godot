@@ -11,12 +11,12 @@ config_version=5
 [application]
 
 config/name="Mouse_Platformer"
-run/main_scene="res://Levels/LT.tscn"
+run/main_scene="res://main_menu.tscn"
 config/features=PackedStringArray("4.1", "Forward Plus")
 
 [autoload]
 
-Global="res://global.gd"
+Game="*res://Game.tscn"
 
 [input]
 

@@ -16,12 +16,6 @@ func _on_game_manager_toggle_game_paused(is_paused : bool):
 func _on_resume_pressed():
 	game_manager.game_paused = false
 
-func _on_save_pressed():
-	pass # Replace with function body.
-
-func _on_load_pressed():
-	pass # Replace with function body.
-
 func _on_credits_pressed():
 	pass # Replace with function body.
 

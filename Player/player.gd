@@ -11,8 +11,8 @@ var direction : Vector2 = Vector2.ZERO
 #Player stats
 var max_health : int = 10
 @onready var health = max_health
-signal health_updated(health)
-
+@export var Bullet : PackedScene
+	
 func _physics_process(delta):
 	#Gravity
 	if not is_on_floor():
@@ -40,8 +40,30 @@ func _physics_process(delta):
 			has_double_jump = false
 	update_facing_direction()
 
+	#Gun facing
+	var mousepos = get_global_mouse_position()
+	var mouseangle = (mousepos - global_position).angle()
+	mouseangle += deg_to_rad(90)
+	$GunSprite.rotation_degrees = rad_to_deg(mouseangle)
+	
+	var mouselocal = $GunSprite.to_local(mousepos)
+	var mouselocalx = int(mouselocal.x)
+	var mouselocaly = int(mouselocal.y)
+	if mouselocalx > 0:
+		$GunSprite.flip_h = true
+#		$GunSprite/Marker2D.rotation_degrees = rad_to_deg(mouseangle)
+	elif mouselocalx < 0:
+		$GunSprite.flip_h = false
+#		$GunSprite/Marker2D.rotation_degrees = rad_to_deg(-mouseangle)
+	$GunSprite/Marker2D.look_at(mousepos)
+	#Gun shooting
 	if Input.is_action_just_pressed("attack"):
-		pass
+		shoot()
+
+func shoot():
+	var b = Bullet.instantiate()
+	owner.add_child(b)
+	b.transform = $GunSprite/Marker2D.global_transform
 
 func damage(amount):
 	_set_health(health - amount)
@@ -57,7 +79,7 @@ func _set_health(value):
 func game_over():
 	get_tree().reload_current_scene()
 
-func update_facing_direction ():
+func update_facing_direction():
 	if direction.x > 0:
 		$Sprite.flip_h = false
 	elif direction.x < 0:

@@ -1,5 +1,9 @@
-CanvasLayer
+Marker2D
+Sprite2D
 TextureProgressBar
+CollisionShape2D
+Area2D
+CanvasLayer
 Label
 Container
 Button
@@ -7,13 +11,10 @@ Node
 RichTextLabel
 Panel
 Control
-CollisionShape2D
-Area2D
 AnimationPlayer
 TextureRect
 Node2D
 CollisionPolygon2D
-Sprite2D
 RigidBody2D
 VBoxContainer
 GridContainer

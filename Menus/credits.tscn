@@ -89,7 +89,7 @@ scale = Vector2(0.15, 0.15)
 icon = ExtResource("2_7wn3d")
 
 [node name="Kyle_Instagram" type="Button" parent="Control/Panel/Kyle"]
-anchors_preset = -1
+anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -111,21 +111,25 @@ icon = ExtResource("5_rmyfc")
 position = Vector2(853, 996)
 scale = Vector2(2, 2)
 input_letter = "M"
+HP_Vis = false
 
 [node name="E" parent="Control/Panel/Menu" instance=ExtResource("3_cbu7k")]
 position = Vector2(930, 996)
 scale = Vector2(2, 2)
 input_letter = "E"
+HP_Vis = false
 
 [node name="N" parent="Control/Panel/Menu" instance=ExtResource("3_cbu7k")]
 position = Vector2(1007, 995)
 scale = Vector2(2, 2)
 input_letter = "N"
+HP_Vis = false
 
 [node name="U" parent="Control/Panel/Menu" instance=ExtResource("3_cbu7k")]
 position = Vector2(1083, 995)
 scale = Vector2(2, 2)
 input_letter = "U"
+HP_Vis = false
 
 [node name="Menu_Button" type="Button" parent="Control/Panel/Menu"]
 modulate = Color(1, 1, 1, 0)
@@ -139,17 +143,17 @@ offset_bottom = 1050.0
 theme = SubResource("Theme_jmqvk")
 metadata/_edit_use_anchors_ = true
 
-[connection signal="pressed" from="Control/Panel/Kyle/Kyle_Web" to="Control" method="_on_button_pressed"]
 [connection signal="pressed" from="Control/Panel/Kyle/Kyle_Web" to="Control" method="_on_github_pressed"]
 [connection signal="pressed" from="Control/Panel/Kyle/Kyle_Web" to="Control" method="_on_kyle_web_pressed"]
-[connection signal="pressed" from="Control/Panel/Kyle/Kyle_ItchIO" to="Control" method="_on_button_pressed"]
-[connection signal="pressed" from="Control/Panel/Kyle/Kyle_ItchIO" to="Control" method="_on_kyle_itch_io_pressed"]
+[connection signal="pressed" from="Control/Panel/Kyle/Kyle_Web" to="Control" method="_on_button_pressed"]
 [connection signal="pressed" from="Control/Panel/Kyle/Kyle_ItchIO" to="Control" method="_on_github_pressed"]
-[connection signal="pressed" from="Control/Panel/Kyle/Kyle_Github" to="Control" method="_on_button_pressed"]
+[connection signal="pressed" from="Control/Panel/Kyle/Kyle_ItchIO" to="Control" method="_on_kyle_itch_io_pressed"]
+[connection signal="pressed" from="Control/Panel/Kyle/Kyle_ItchIO" to="Control" method="_on_button_pressed"]
 [connection signal="pressed" from="Control/Panel/Kyle/Kyle_Github" to="Control" method="_on_github_pressed"]
 [connection signal="pressed" from="Control/Panel/Kyle/Kyle_Github" to="Control" method="_on_kyle_github_pressed"]
-[connection signal="pressed" from="Control/Panel/Kyle/Kyle_Instagram" to="Control" method="_on_button_pressed"]
+[connection signal="pressed" from="Control/Panel/Kyle/Kyle_Github" to="Control" method="_on_button_pressed"]
 [connection signal="pressed" from="Control/Panel/Kyle/Kyle_Instagram" to="Control" method="_on_github_pressed"]
 [connection signal="pressed" from="Control/Panel/Kyle/Kyle_Instagram" to="Control" method="_on_kyle_instagram_pressed"]
+[connection signal="pressed" from="Control/Panel/Kyle/Kyle_Instagram" to="Control" method="_on_button_pressed"]
 [connection signal="pressed" from="Control/Panel/Menu/Menu_Button" to="Control" method="_on_menu_button_pressed"]
 [connection signal="pressed" from="Control/Panel/Menu/Menu_Button" to="Control/Panel/Menu/Menu_Button" method="_on_pressed"]

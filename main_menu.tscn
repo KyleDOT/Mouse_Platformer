@@ -15,20 +15,24 @@ metadata/_edit_vertical_guides_ = [959.0]
 position = Vector2(843, 332)
 scale = Vector2(2, 2)
 input_letter = "P"
+HP_Vis = false
 
 [node name="L" parent="Play" instance=ExtResource("1_whaie")]
 position = Vector2(922, 333)
 scale = Vector2(2, 2)
 input_letter = "L"
+HP_Vis = false
 
 [node name="A" parent="Play" instance=ExtResource("1_whaie")]
 position = Vector2(1000, 333)
 scale = Vector2(2, 2)
+HP_Vis = false
 
 [node name="Y" parent="Play" instance=ExtResource("1_whaie")]
 position = Vector2(1079, 332)
 scale = Vector2(2, 2)
 input_letter = "Y"
+HP_Vis = false
 
 [node name="Play_Button" type="Button" parent="Play"]
 modulate = Color(1, 1, 1, 0)
@@ -45,36 +49,43 @@ metadata/_edit_use_anchors_ = true
 position = Vector2(724, 553)
 scale = Vector2(2, 2)
 input_letter = "C"
+HP_Vis = false
 
 [node name="R" parent="Credits" instance=ExtResource("1_whaie")]
 position = Vector2(802, 553)
 scale = Vector2(2, 2)
 input_letter = "R"
+HP_Vis = false
 
 [node name="E" parent="Credits" instance=ExtResource("1_whaie")]
 position = Vector2(881, 553)
 scale = Vector2(2, 2)
 input_letter = "E"
+HP_Vis = false
 
 [node name="D" parent="Credits" instance=ExtResource("1_whaie")]
 position = Vector2(959, 553)
 scale = Vector2(2, 2)
 input_letter = "D"
+HP_Vis = false
 
 [node name="I" parent="Credits" instance=ExtResource("1_whaie")]
 position = Vector2(1038, 553)
 scale = Vector2(2, 2)
 input_letter = "I"
+HP_Vis = false
 
 [node name="T" parent="Credits" instance=ExtResource("1_whaie")]
 position = Vector2(1116, 552)
 scale = Vector2(2, 2)
 input_letter = "T"
+HP_Vis = false
 
 [node name="S" parent="Credits" instance=ExtResource("1_whaie")]
 position = Vector2(1195, 551)
 scale = Vector2(2, 2)
 input_letter = "S"
+HP_Vis = false
 
 [node name="Credits_Button" type="Button" parent="Credits"]
 modulate = Color(1, 1, 1, 0)
@@ -91,21 +102,25 @@ metadata/_edit_use_anchors_ = true
 position = Vector2(841, 775)
 scale = Vector2(2, 2)
 input_letter = "Q"
+HP_Vis = false
 
 [node name="U" parent="Quit" instance=ExtResource("1_whaie")]
 position = Vector2(918, 775)
 scale = Vector2(2, 2)
 input_letter = "U"
+HP_Vis = false
 
 [node name="I" parent="Quit" instance=ExtResource("1_whaie")]
 position = Vector2(995, 774)
 scale = Vector2(2, 2)
 input_letter = "I"
+HP_Vis = false
 
 [node name="T" parent="Quit" instance=ExtResource("1_whaie")]
 position = Vector2(1071, 774)
 scale = Vector2(2, 2)
 input_letter = "T"
+HP_Vis = false
 
 [node name="Quit_Button" type="Button" parent="Quit"]
 modulate = Color(1, 1, 1, 0)

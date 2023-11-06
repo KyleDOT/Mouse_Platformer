@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://cuftgop3em15b"]
+[gd_scene load_steps=7 format=3 uid="uid://cuftgop3em15b"]
 
 [ext_resource type="Script" path="res://Enemies/Enemy.gd" id="1_btom3"]
 [ext_resource type="Texture2D" uid="uid://c3wsaq2vlx10p" path="res://Assets/Sprites/Characters/keycap_base_single.png" id="2_12ap8"]
@@ -9,9 +9,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_iwq7s"]
 size = Vector2(37, 41)
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_sw52c"]
-
-[node name="Enemy" type="Area2D" groups=["enemy"]]
+[node name="Enemy" type="Area2D" groups=["Enemy"]]
 scale = Vector2(0.45, 0.45)
 script = ExtResource("1_btom3")
 
@@ -20,16 +18,8 @@ position = Vector2(0, -1.52588e-05)
 scale = Vector2(0.33, 0.33)
 texture = ExtResource("2_12ap8")
 
-[node name="Hitbox" type="CollisionShape2D" parent="."]
+[node name="Melee" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_iwq7s")
-
-[node name="Detection" type="Area2D" parent="."]
-visible = false
-
-[node name="DetectionArea" type="CollisionShape2D" parent="Detection"]
-scale = Vector2(25, 25)
-shape = SubResource("CircleShape2D_sw52c")
-debug_color = Color(0, 0.6, 0.701961, 0)
 
 [node name="KeycapBar" type="TextureProgressBar" parent="."]
 offset_left = -33.3333
@@ -44,4 +34,3 @@ texture_over = ExtResource("4_vpj74")
 texture_progress = ExtResource("5_a1pup")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
-[connection signal="body_entered" from="Detection" to="." method="_on_detection_body_entered"]

@@ -6,10 +6,15 @@ var bullet_damage : int = 1
 func _process(delta):
 	position += transform.x * bullet_speed * delta
 
-func _on_body_entered(body):
-	if body.is_in_group("enemy"):
+func _on_area_entered(body):
+	if body.is_in_group("Enemy"):
 		body.damage(bullet_damage)
+		queue_free()
 	elif !body.is_in_group("Player"):
+		queue_free()
+
+func _on_body_entered(body):
+	if !body.is_in_group("Player"):
 		queue_free()
 
 #func set_gun_rock():

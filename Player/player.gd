@@ -51,11 +51,10 @@ func _physics_process(delta):
 	var mouselocaly = int(mouselocal.y)
 	if mouselocalx > 0:
 		$GunSprite.flip_h = true
-#		$GunSprite/Marker2D.rotation_degrees = rad_to_deg(mouseangle)
 	elif mouselocalx < 0:
 		$GunSprite.flip_h = false
-#		$GunSprite/Marker2D.rotation_degrees = rad_to_deg(-mouseangle)
 	$GunSprite/Marker2D.look_at(mousepos)
+	
 	#Gun shooting
 	if Input.is_action_just_pressed("attack"):
 		shoot()

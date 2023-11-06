@@ -12,3 +12,4 @@ res://Menus/credits.tscn
 res://main_menu.tscn
 res://Player/player.gd
 res://Player/bullet.gd
+res://Enemies/Enemy.gd

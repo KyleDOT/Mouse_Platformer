@@ -1,7 +1,8 @@
+CollisionShape2D
+RigidBody2D
 Marker2D
 Sprite2D
 TextureProgressBar
-CollisionShape2D
 Area2D
 CanvasLayer
 Label
@@ -15,7 +16,6 @@ AnimationPlayer
 TextureRect
 Node2D
 CollisionPolygon2D
-RigidBody2D
 VBoxContainer
 GridContainer
 StaticBody2D

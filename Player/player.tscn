@@ -50,5 +50,3 @@ texture = ExtResource("6_x1hb0")
 
 [node name="Marker2D" type="Marker2D" parent="GunSprite"]
 position = Vector2(-3.03046, -42.4242)
-
-[connection signal="ready" from="." to="." method="_on_ready"]

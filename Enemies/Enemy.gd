@@ -4,8 +4,10 @@ extends Area2D
 @export var input_letter: String = "A"
 @onready var path_left: String = "res://Assets/Sprites/Characters/keycaps/keycap_" + input_letter + "_left.png"
 @onready var path_right: String = "res://Assets/Sprites/Characters/keycaps/keycap_" + input_letter + "_right.png"
+@onready var path_audio: String = "res://Assets/DeathAudio/" + input_letter + ".mp3"
 @onready var keycap_left = load(path_left)
 @onready var keycap_right = load(path_right)
+@onready var death_audio = load(path_audio)
 
 @export var HP_Vis : bool = true
 
@@ -62,4 +64,8 @@ func _set_health(value):
 			killed()
 
 func killed():
+	$DeathAudio.stream = death_audio
+	$DeathAudio.play()
+
+func _on_death_audio_finished():
 	queue_free()

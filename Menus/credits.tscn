@@ -143,17 +143,12 @@ offset_bottom = 1050.0
 theme = SubResource("Theme_jmqvk")
 metadata/_edit_use_anchors_ = true
 
-[connection signal="pressed" from="Control/Panel/Kyle/Kyle_Web" to="Control" method="_on_github_pressed"]
 [connection signal="pressed" from="Control/Panel/Kyle/Kyle_Web" to="Control" method="_on_kyle_web_pressed"]
-[connection signal="pressed" from="Control/Panel/Kyle/Kyle_Web" to="Control" method="_on_button_pressed"]
+[connection signal="pressed" from="Control/Panel/Kyle/Kyle_Web" to="Control" method="_on_github_pressed"]
 [connection signal="pressed" from="Control/Panel/Kyle/Kyle_ItchIO" to="Control" method="_on_github_pressed"]
 [connection signal="pressed" from="Control/Panel/Kyle/Kyle_ItchIO" to="Control" method="_on_kyle_itch_io_pressed"]
-[connection signal="pressed" from="Control/Panel/Kyle/Kyle_ItchIO" to="Control" method="_on_button_pressed"]
 [connection signal="pressed" from="Control/Panel/Kyle/Kyle_Github" to="Control" method="_on_github_pressed"]
 [connection signal="pressed" from="Control/Panel/Kyle/Kyle_Github" to="Control" method="_on_kyle_github_pressed"]
-[connection signal="pressed" from="Control/Panel/Kyle/Kyle_Github" to="Control" method="_on_button_pressed"]
 [connection signal="pressed" from="Control/Panel/Kyle/Kyle_Instagram" to="Control" method="_on_github_pressed"]
 [connection signal="pressed" from="Control/Panel/Kyle/Kyle_Instagram" to="Control" method="_on_kyle_instagram_pressed"]
-[connection signal="pressed" from="Control/Panel/Kyle/Kyle_Instagram" to="Control" method="_on_button_pressed"]
 [connection signal="pressed" from="Control/Panel/Menu/Menu_Button" to="Control" method="_on_menu_button_pressed"]
-[connection signal="pressed" from="Control/Panel/Menu/Menu_Button" to="Control/Panel/Menu/Menu_Button" method="_on_pressed"]

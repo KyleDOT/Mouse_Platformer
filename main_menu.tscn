@@ -131,13 +131,6 @@ offset_bottom = 829.0
 theme = SubResource("Theme_i5sxu")
 metadata/_edit_use_anchors_ = true
 
-[node name="Container" type="Container" parent="."]
-offset_right = 1924.0
-offset_bottom = 40.0
-
 [connection signal="pressed" from="Play/Play_Button" to="." method="_on_play_button_pressed"]
-[connection signal="pressed" from="Play/Play_Button" to="Play/Play_Button" method="_on_pressed"]
 [connection signal="pressed" from="Credits/Credits_Button" to="." method="_on_credits_button_pressed"]
-[connection signal="pressed" from="Credits/Credits_Button" to="Credits/Credits_Button" method="_on_pressed"]
 [connection signal="pressed" from="Quit/Quit_Button" to="." method="_on_quit_button_pressed"]
-[connection signal="pressed" from="Quit/Quit_Button" to="Quit/Quit_Button" method="_on_pressed"]

@@ -33,4 +33,7 @@ texture_under = ExtResource("3_0xpnu")
 texture_over = ExtResource("4_vpj74")
 texture_progress = ExtResource("5_a1pup")
 
+[node name="DeathAudio" type="AudioStreamPlayer" parent="."]
+
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="finished" from="DeathAudio" to="." method="_on_death_audio_finished"]

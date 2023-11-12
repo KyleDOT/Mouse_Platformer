@@ -1,12 +1,12 @@
 [gd_scene load_steps=3 format=3 uid="uid://cjgdmpkn2ccvv"]
 
-[ext_resource type="Script" path="res://Enemies/Mousetrap_Real.gd" id="1_yhjw5"]
+[ext_resource type="Script" path="res://Enemies/Kill_Box.gd" id="1_54hsj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tymvo"]
 
 [node name="Kill_Box" type="Area2D"]
 scale = Vector2(0.2, 0.2)
-script = ExtResource("1_yhjw5")
+script = ExtResource("1_54hsj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 scale = Vector2(5, 5)

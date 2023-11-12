@@ -48,7 +48,6 @@ func _physics_process(delta):
 	
 	var mouselocal = $GunSprite.to_local(mousepos)
 	var mouselocalx = int(mouselocal.x)
-	var mouselocaly = int(mouselocal.y)
 	if mouselocalx > 0:
 		$GunSprite.flip_h = true
 	elif mouselocalx < 0:
@@ -56,13 +55,14 @@ func _physics_process(delta):
 	$GunSprite/Marker2D.look_at(mousepos)
 	
 	#Gun shooting
-	if Input.is_action_just_pressed("attack"):
+	if Input.is_action_just_pressed("attack") and $GunSprite/Timer.is_stopped():
 		shoot()
 
 func shoot():
 	var b = Bullet.instantiate()
 	owner.add_child(b)
 	b.transform = $GunSprite/Marker2D.global_transform
+	$GunSprite/Timer.start()
 
 func damage(amount):
 	_set_health(health - amount)

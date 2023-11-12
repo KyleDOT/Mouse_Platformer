@@ -14,6 +14,7 @@ height = 70.0
 
 [node name="Player" type="CharacterBody2D" groups=["Player"]]
 scale = Vector2(0.5, 0.5)
+collision_layer = 3
 script = ExtResource("1_iogk8")
 Bullet = ExtResource("2_tqx5o")
 
@@ -50,3 +51,7 @@ texture = ExtResource("6_x1hb0")
 
 [node name="Marker2D" type="Marker2D" parent="GunSprite"]
 position = Vector2(-3.03046, -42.4242)
+
+[node name="Timer" type="Timer" parent="GunSprite"]
+wait_time = 0.25
+one_shot = true

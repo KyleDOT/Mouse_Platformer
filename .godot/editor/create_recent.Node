@@ -1,8 +1,10 @@
+Marker2D
+Timer
+RayCast2D
 AudioStreamPlayer
 AudioStreamPlayer2D
 CollisionShape2D
 RigidBody2D
-Marker2D
 Sprite2D
 TextureProgressBar
 Area2D

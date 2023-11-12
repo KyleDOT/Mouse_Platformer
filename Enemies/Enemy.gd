@@ -10,11 +10,13 @@ extends Area2D
 @onready var death_audio = load(path_audio)
 
 @export var HP_Vis : bool = true
+@export var Bullet : PackedScene
 
 #Enemy stats
 @export var move_speed : float = 25
 @export var move_dir : Vector2
-var melee_damage : int = 1
+var melee_damage : int = 2
+var shoot_damage : int = 1
 var max_health : int = 3
 @onready var health = max_health
 
@@ -29,8 +31,14 @@ func _ready():
 	#Initial facing
 	if target_pos.x < start_pos.x:
 		$KeycapBaseSingle.set_texture(keycap_left)
+		$RayCast2D.position.x = -20
+		$RayCast2D.target_position.x = -300
+		$RayCast2D/Marker2D.rotation_degrees = 180
 	else:
 		$KeycapBaseSingle.set_texture(keycap_right)
+		$RayCast2D.position.x = 20
+		$RayCast2D.target_position.x = 300
+		$RayCast2D/Marker2D.rotation_degrees = 0
 	
 	#HealthBar visible
 	if HP_Vis == false:
@@ -43,9 +51,26 @@ func _process(delta):
 		if global_position == start_pos:
 			target_pos = start_pos + move_dir
 			$KeycapBaseSingle.set_texture(keycap_left)
+			$RayCast2D.position.x = -20
+			$RayCast2D.target_position.x = -300
+			$RayCast2D/Marker2D.rotation_degrees = 180
 		else: 
 			target_pos = start_pos
 			$KeycapBaseSingle.set_texture(keycap_right)
+			$RayCast2D.position.x = 20
+			$RayCast2D.target_position.x = 300
+			$RayCast2D/Marker2D.rotation_degrees = 0
+			
+	if $RayCast2D.is_colliding() and $Timer.is_stopped():
+		shoot()
+
+func shoot():
+	print("Shot fired")
+	var b = Bullet.instantiate()
+	owner.add_child(b)
+	b.transform = $RayCast2D/Marker2D.global_transform
+	$Timer.start()
+
 #Deal damage
 func _on_body_entered(body):
 	if body.is_in_group("Player"):

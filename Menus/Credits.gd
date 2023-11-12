@@ -10,9 +10,3 @@ func _on_kyle_web_pressed():
 
 func _on_kyle_itch_io_pressed():
 	OS.shell_open("https://kyledot.itch.io/")
-
-func _on_kyle_github_pressed():
-	OS.shell_open("https://github.com/KyleDOT")
-
-func _on_kyle_instagram_pressed():
-	OS.shell_open("https://www.instagram.com/kyled0t")

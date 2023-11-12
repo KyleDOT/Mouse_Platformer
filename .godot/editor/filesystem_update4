@@ -12,3 +12,9 @@ res://Menus/credits.tscn
 res://main_menu.tscn
 res://Player/bullet.tscn
 res://Enemies/Mousetrap_Real.gd
+res://Player/player.gd
+res://Player/bullet.gd
+res://Enemies/e_bullet.tscn
+res://Menus/Credits.gd
+res://Enemies/e_bullet.gd
+res://Enemies/Kill_Box.gd

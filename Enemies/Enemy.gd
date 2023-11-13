@@ -89,6 +89,10 @@ func _set_health(value):
 			killed()
 
 func killed():
+	melee_damage = 0
+	$KeycapBar.visible = false
+	$RayCast2D.enabled = false
+	move_speed = 0
 	$DeathAudio.stream = death_audio
 	$DeathAudio.play()
 

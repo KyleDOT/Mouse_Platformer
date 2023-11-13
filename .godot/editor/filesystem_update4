@@ -18,3 +18,8 @@ res://Enemies/e_bullet.tscn
 res://Menus/Credits.gd
 res://Enemies/e_bullet.gd
 res://Enemies/Kill_Box.gd
+res://Enemies/boss.tscn
+res://Enemies/boss.gd
+res://Menus/story.tscn
+res://Menus/story.gd
+res://main_menu.gd

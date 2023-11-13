@@ -1,0 +1,52 @@
+[gd_scene load_steps=2 format=3 uid="uid://dy4shhj2hncin"]
+
+[ext_resource type="Script" path="res://Menus/story.gd" id="1_t43ad"]
+
+[node name="Node2D" type="Node2D"]
+position = Vector2(576, 324)
+metadata/_edit_vertical_guides_ = [969.0]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_t43ad")
+
+[node name="Panel" type="Panel" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Main Credits" type="RichTextLabel" parent="Control/Panel"]
+layout_mode = 0
+offset_left = -133.0
+offset_top = -72.0
+offset_right = 920.0
+offset_bottom = 505.0
+theme_override_font_sizes/normal_font_size = 28
+theme_override_font_sizes/bold_font_size = 32
+bbcode_enabled = true
+text = "[p align=center]The year is 1999, The Matrix is in cinemas and Y2K is coming. Keycaps fearful of the future and are rallied by Alt & F4 as they proclaim if the physical keyboard doesn’t take a stand they’ll be phased out by growing touch-screen technologies, the pair promise they can close the world, saving it from the lack of tactile feedback.
+
+You, an upcoming optical mouse, not yet widely available have your chance to stop Alt & F4 from closing the world and prove yourself a reliable and effective competitor to the mechanical mouse.
+
+
+[b]Click to continue[/b]
+[/p]"
+
+[node name="Continue" type="Button" parent="Control/Panel"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = -590.0
+offset_top = -335.0
+offset_right = 1353.0
+offset_bottom = 772.0
+button_mask = 7
+
+[connection signal="pressed" from="Control/Panel/Continue" to="Control" method="_on_continue_pressed"]

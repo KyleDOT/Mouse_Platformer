@@ -1,0 +1,51 @@
+[gd_scene load_steps=7 format=3 uid="uid://byqfhe56ke8nw"]
+
+[ext_resource type="Script" path="res://Enemies/boss.gd" id="1_8jjk1"]
+[ext_resource type="Texture2D" uid="uid://gbchgb58jotv" path="res://Assets/Sprites/Characters/keycaps/keycap_alt_left.png" id="2_he3lb"]
+[ext_resource type="Texture2D" uid="uid://cry6t0ethgshe" path="res://Assets/HUD/health_under.png" id="4_xidrs"]
+[ext_resource type="Texture2D" uid="uid://bt2yr2o5sx06j" path="res://Assets/HUD/health_over.png" id="5_x32ru"]
+[ext_resource type="Texture2D" uid="uid://bggxqm85qmfl1" path="res://Assets/HUD/health_progress.png" id="6_055bk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iwq7s"]
+size = Vector2(66.6667, 41)
+
+[node name="Boss" type="Area2D" groups=["Enemy"]]
+scale = Vector2(0.45, 0.45)
+script = ExtResource("1_8jjk1")
+
+[node name="KeycapBaseSingle" type="Sprite2D" parent="."]
+position = Vector2(0, -1.52588e-05)
+scale = Vector2(0.33, 0.33)
+texture = ExtResource("2_he3lb")
+
+[node name="Melee" type="CollisionShape2D" parent="."]
+position = Vector2(5.29819e-07, 0)
+shape = SubResource("RectangleShape2D_iwq7s")
+
+[node name="KeycapBar" type="TextureProgressBar" parent="."]
+offset_left = -33.3333
+offset_top = -42.2222
+offset_right = 606.667
+offset_bottom = 21.7778
+scale = Vector2(0.1, 0.2)
+max_value = 3.0
+value = 3.0
+texture_under = ExtResource("4_xidrs")
+texture_over = ExtResource("5_x32ru")
+texture_progress = ExtResource("6_055bk")
+
+[node name="DeathAudio" type="AudioStreamPlayer" parent="."]
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+position = Vector2(-35, 0)
+target_position = Vector2(-200, 0)
+collision_mask = 2
+
+[node name="Marker2D" type="Marker2D" parent="RayCast2D"]
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="finished" from="DeathAudio" to="." method="_on_death_audio_finished"]

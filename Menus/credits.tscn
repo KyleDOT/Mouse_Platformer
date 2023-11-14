@@ -38,12 +38,15 @@ theme_override_font_sizes/normal_font_size = 28
 theme_override_font_sizes/bold_font_size = 32
 bbcode_enabled = true
 text = "[b]KyleDOT - [/b]
-Programming, level & character art, level design
+Programming, art, & levels
 
 [b]KaosMage20[/b]
 Voice acting
 
-[b]Alex - [/b]
+[b]Maturin[/b]
+Voice acting
+
+[b]MoonLoaf[/b]
 Voice acting"
 
 [node name="Playtesters" type="RichTextLabel" parent="Control/Panel"]
@@ -56,8 +59,6 @@ theme_override_font_sizes/normal_font_size = 28
 theme_override_font_sizes/bold_font_size = 32
 bbcode_enabled = true
 text = "[b]Playtesters[/b]
-Gazure
-IMIDY
 "
 
 [node name="Kyle" type="Node" parent="Control/Panel"]

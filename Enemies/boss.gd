@@ -11,6 +11,7 @@ extends Area2D
 
 @export var HP_Vis : bool = true
 @export var Bullet : PackedScene
+@export var Win : PackedScene
 
 #Enemy stats
 @export var move_speed : float = 25
@@ -98,6 +99,10 @@ func killed():
 	move_speed = 0
 	$DeathAudio.stream = death_audio
 	$DeathAudio.play()
+	if Win != null:
+		var w = Win.instantiate()
+		owner.add_child(w)
+		w.transform = $".".global_transform
 
 func _on_death_audio_finished():
 	queue_free()

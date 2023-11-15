@@ -23,3 +23,4 @@ res://Enemies/boss.gd
 res://Menus/story.tscn
 res://Menus/story.gd
 res://main_menu.gd
+res://Levels/LT.tscn

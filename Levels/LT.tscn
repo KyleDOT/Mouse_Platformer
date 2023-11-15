@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://brtatydrcwclp"]
 
 [ext_resource type="Texture2D" uid="uid://cav3l4tfj66p4" path="res://Assets/Sprites/Tiles/tiles_packed.png" id="1_36n35"]
-[ext_resource type="PackedScene" uid="uid://clrms1bshyyiq" path="res://player.tscn" id="2_ygewv"]
+[ext_resource type="PackedScene" uid="uid://clrms1bshyyiq" path="res://Player/player.tscn" id="2_ygewv"]
 [ext_resource type="PackedScene" uid="uid://cuftgop3em15b" path="res://Enemies/enemy.tscn" id="3_s5x21"]
 [ext_resource type="PackedScene" uid="uid://bco6464abhsw6" path="res://Enemies/Mousetrap_Real.tscn" id="4_43kvc"]
 [ext_resource type="PackedScene" uid="uid://dmy6a7s3jkycj" path="res://Items/coin.tscn" id="5_xc5nv"]
@@ -615,4 +615,3 @@ position = Vector2(42, 15)
 
 [node name="Flag" parent="." instance=ExtResource("6_71sbq")]
 position = Vector2(105, 8)
-next_scene = "res://Levels/L2.tscn"

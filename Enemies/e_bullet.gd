@@ -9,6 +9,8 @@ func _process(delta):
 func _on_area_entered(body):
 	if body.is_in_group("Enemy"):
 		pass
+	elif body.is_in_group("Bullet"):
+		pass
 	elif !body.is_in_group("Enemy"):
 		queue_free()
 

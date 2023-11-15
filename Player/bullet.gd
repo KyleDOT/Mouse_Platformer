@@ -10,6 +10,8 @@ func _on_area_entered(body):
 	if body.is_in_group("Enemy"):
 		body.damage(bullet_damage)
 		queue_free()
+	elif body.is_in_group("Bullet"):
+		pass
 	elif !body.is_in_group("Player"):
 		queue_free()
 

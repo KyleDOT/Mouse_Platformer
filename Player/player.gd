@@ -1,9 +1,11 @@
 extends CharacterBody2D
 
 #Player movement
+const UP = Vector2(0,-1)
+
 var move_speed : float = 150
-var jump_force : float = 175
-var jump_double : float = 150
+var jump_force : float = 200
+var jump_double : float = 200
 var has_double_jump : bool = true
 var gravity : float = 500
 var direction : Vector2 = Vector2.ZERO
@@ -17,6 +19,7 @@ func _physics_process(delta):
 	#Gravity
 	if not is_on_floor():
 		velocity.y += gravity * delta
+		$JumpTimer.start
 	else:
 		has_double_jump = true
 	
@@ -34,8 +37,11 @@ func _physics_process(delta):
 		if is_on_floor():
 			#single/initial jump
 			velocity.y -= jump_force
+		elif ($JumpTimer.time_left > 0):
+			velocity.y -= jump_force
 		elif has_double_jump:
 			#double jump
+			velocity.y = 0
 			velocity.y -= jump_double
 			has_double_jump = false
 	update_facing_direction()

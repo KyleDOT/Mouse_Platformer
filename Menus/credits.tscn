@@ -121,6 +121,6 @@ metadata/_edit_use_anchors_ = true
 
 [connection signal="pressed" from="Control/Panel/Kyle/Kyle_Web" to="Control" method="_on_kyle_web_pressed"]
 [connection signal="pressed" from="Control/Panel/Kyle/Kyle_Web" to="Control" method="_on_github_pressed"]
-[connection signal="pressed" from="Control/Panel/Kyle/Kyle_ItchIO" to="Control" method="_on_github_pressed"]
 [connection signal="pressed" from="Control/Panel/Kyle/Kyle_ItchIO" to="Control" method="_on_kyle_itch_io_pressed"]
+[connection signal="pressed" from="Control/Panel/Kyle/Kyle_ItchIO" to="Control" method="_on_github_pressed"]
 [connection signal="pressed" from="Control/Panel/Menu/Menu_Button" to="Control" method="_on_menu_button_pressed"]

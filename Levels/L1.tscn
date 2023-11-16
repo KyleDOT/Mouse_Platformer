@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://noiil64gjhww"]
+[gd_scene load_steps=11 format=3 uid="uid://noiil64gjhww"]
 
 [ext_resource type="Texture2D" uid="uid://nxl1rmxby81" path="res://Assets/Sprites/Tiles/tile_set.png" id="1_t4x5g"]
 [ext_resource type="PackedScene" uid="uid://clrms1bshyyiq" path="res://Player/player.tscn" id="2_do56k"]
@@ -7,7 +7,6 @@
 [ext_resource type="PackedScene" uid="uid://cjgdmpkn2ccvv" path="res://Enemies/Kill_Box.tscn" id="5_iv41w"]
 [ext_resource type="PackedScene" uid="uid://c4oh2h1glfits" path="res://Items/flag.tscn" id="6_o6yfr"]
 [ext_resource type="PackedScene" uid="uid://byqfhe56ke8nw" path="res://Enemies/boss.tscn" id="7_bw1lh"]
-[ext_resource type="PackedScene" uid="uid://gehnm8yomokx" path="res://Enemies/e_bullet.tscn" id="8_g6cha"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_q0rmc"]
 
@@ -813,7 +812,6 @@ scale = Vector2(8.47973, 0.421538)
 
 [node name="Boss_Ctrl" parent="." instance=ExtResource("7_bw1lh")]
 position = Vector2(2035, 935)
-Bullet = ExtResource("8_g6cha")
 Win = ExtResource("6_o6yfr")
 move_dir = Vector2(-250, 0)
 

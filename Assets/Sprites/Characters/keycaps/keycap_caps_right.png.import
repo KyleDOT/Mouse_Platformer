@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bck2gngkedmaa"
-path="res://.godot/imported/keycap_capst_right.png-98e30c6ba3f6591e199d5fcbfe4f3056.ctex"
+path="res://.godot/imported/keycap_caps_right.png-ba1760b9afde5436479d2dee9baf5ef8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/Characters/keycaps/keycap_capst_right.png"
-dest_files=["res://.godot/imported/keycap_capst_right.png-98e30c6ba3f6591e199d5fcbfe4f3056.ctex"]
+source_file="res://Assets/Sprites/Characters/keycaps/keycap_caps_right.png"
+dest_files=["res://.godot/imported/keycap_caps_right.png-ba1760b9afde5436479d2dee9baf5ef8.ctex"]
 
 [params]
 

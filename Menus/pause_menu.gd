@@ -17,7 +17,7 @@ func _on_resume_pressed():
 	game_manager.game_paused = false
 
 func _on_main_pressed():
-	get_tree().change_scene_to_file("res://main_menu.tscn")
+	get_tree().change_scene_to_file("res://Game.tscn")
 	queue_free()
 
 func _on_quit_pressed():

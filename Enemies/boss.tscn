@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://byqfhe56ke8nw"]
+[gd_scene load_steps=8 format=3 uid="uid://byqfhe56ke8nw"]
 
 [ext_resource type="Script" path="res://Enemies/boss.gd" id="1_8jjk1"]
 [ext_resource type="Texture2D" uid="uid://gbchgb58jotv" path="res://Assets/Sprites/Characters/keycaps/keycap_alt_left.png" id="2_he3lb"]
+[ext_resource type="PackedScene" uid="uid://gehnm8yomokx" path="res://Enemies/e_bullet.tscn" id="2_riiui"]
 [ext_resource type="Texture2D" uid="uid://cry6t0ethgshe" path="res://Assets/HUD/health_under.png" id="4_xidrs"]
 [ext_resource type="Texture2D" uid="uid://bt2yr2o5sx06j" path="res://Assets/HUD/health_over.png" id="5_x32ru"]
 [ext_resource type="Texture2D" uid="uid://bggxqm85qmfl1" path="res://Assets/HUD/health_progress.png" id="6_055bk"]
@@ -12,6 +13,7 @@ size = Vector2(66.6667, 41)
 [node name="Boss" type="Area2D" groups=["Enemy"]]
 scale = Vector2(0.45, 0.45)
 script = ExtResource("1_8jjk1")
+Bullet = ExtResource("2_riiui")
 
 [node name="KeycapBaseSingle" type="Sprite2D" parent="."]
 position = Vector2(0, -1.52588e-05)

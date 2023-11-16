@@ -1,0 +1,52 @@
+[gd_scene load_steps=2 format=3 uid="uid://bhj1lmwvqv7qr"]
+
+[ext_resource type="Script" path="res://Levels/L4.gd" id="1_m6bqu"]
+
+[node name="Node2D" type="Node2D"]
+position = Vector2(576, 324)
+metadata/_edit_vertical_guides_ = [969.0]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_m6bqu")
+
+[node name="Panel" type="Panel" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Main Credits" type="RichTextLabel" parent="Control/Panel"]
+layout_mode = 0
+offset_left = -133.0
+offset_top = -72.0
+offset_right = 920.0
+offset_bottom = 505.0
+theme_override_font_sizes/normal_font_size = 28
+theme_override_font_sizes/bold_font_size = 32
+bbcode_enabled = true
+text = "[p align=center]With Alt & F4 deleted peace is partially restored in the tense upcoming of Y2k. While you efforts proved the reliablity of optical and laser mice over the coming years.
+
+As the years passed optical technologies phased out the need for mechanical mice, and the fears of the physical keyboard were quelled as tocuh screen largely remained with smaller, portable devices. Congratulations!
+
+
+[b]Click to return to main menu[/b]
+[/p]"
+
+[node name="Continue" type="Button" parent="Control/Panel"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = -590.0
+offset_top = -335.0
+offset_right = 1353.0
+offset_bottom = 772.0
+button_mask = 7
+
+[connection signal="pressed" from="Control/Panel/Continue" to="Control" method="_on_continue_pressed"]

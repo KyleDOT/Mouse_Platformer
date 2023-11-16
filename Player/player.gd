@@ -4,10 +4,10 @@ extends CharacterBody2D
 const UP = Vector2(0,-1)
 
 var move_speed : float = 150
-var jump_force : float = 200
+var jump_force : float = 250
 var jump_double : float = 200
 var has_double_jump : bool = true
-var gravity : float = 500
+var gravity : float = 600
 var direction : Vector2 = Vector2.ZERO
 
 #Player stats

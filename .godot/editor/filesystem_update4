@@ -27,3 +27,4 @@ res://Levels/LT.tscn
 res://Levels/L4.tscn
 res://Menus/pause_menu.gd
 res://Levels/L4.gd
+res://Items/flag.tscn

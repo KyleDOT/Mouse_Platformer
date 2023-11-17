@@ -59,7 +59,9 @@ theme_override_font_sizes/normal_font_size = 28
 theme_override_font_sizes/bold_font_size = 32
 bbcode_enabled = true
 text = "[b]Playtesters[/b]
-"
+Akoura
+Maturin
+KaosMage20"
 
 [node name="Kyle" type="Node" parent="Control/Panel"]
 
@@ -119,8 +121,8 @@ offset_bottom = 1050.0
 theme = SubResource("Theme_jmqvk")
 metadata/_edit_use_anchors_ = true
 
-[connection signal="pressed" from="Control/Panel/Kyle/Kyle_Web" to="Control" method="_on_kyle_web_pressed"]
 [connection signal="pressed" from="Control/Panel/Kyle/Kyle_Web" to="Control" method="_on_github_pressed"]
-[connection signal="pressed" from="Control/Panel/Kyle/Kyle_ItchIO" to="Control" method="_on_kyle_itch_io_pressed"]
+[connection signal="pressed" from="Control/Panel/Kyle/Kyle_Web" to="Control" method="_on_kyle_web_pressed"]
 [connection signal="pressed" from="Control/Panel/Kyle/Kyle_ItchIO" to="Control" method="_on_github_pressed"]
+[connection signal="pressed" from="Control/Panel/Kyle/Kyle_ItchIO" to="Control" method="_on_kyle_itch_io_pressed"]
 [connection signal="pressed" from="Control/Panel/Menu/Menu_Button" to="Control" method="_on_menu_button_pressed"]

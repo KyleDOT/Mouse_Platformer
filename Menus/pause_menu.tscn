@@ -55,6 +55,6 @@ size_flags_horizontal = 3
 text = "Quit"
 
 [connection signal="pressed" from="Panel/VBoxContainer/Resume" to="." method="_on_resume_pressed"]
-[connection signal="pressed" from="Panel/VBoxContainer/Main" to="." method="_on_resume_pressed"]
 [connection signal="pressed" from="Panel/VBoxContainer/Main" to="." method="_on_main_pressed"]
+[connection signal="pressed" from="Panel/VBoxContainer/Main" to="." method="_on_resume_pressed"]
 [connection signal="pressed" from="Panel/VBoxContainer/Quit" to="." method="_on_quit_pressed"]

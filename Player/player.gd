@@ -34,16 +34,22 @@ func _physics_process(delta):
 
 	#Jumping
 	if Input.is_action_just_pressed("move_up"):
+		if not is_on_floor():
+			if ($JumpTimer.time_left > 0):
+				velocity.y = 0
+				velocity.y -= jump_force
+			elif has_double_jump:
+				velocity.y = 0
+				velocity.y -= jump_double
+				has_double_jump = false
+
 		if is_on_floor():
-			#single/initial jump
 			velocity.y -= jump_force
 		elif ($JumpTimer.time_left > 0):
-			velocity.y -= jump_force
-		elif has_double_jump:
-			#double jump
 			velocity.y = 0
-			velocity.y -= jump_double
-			has_double_jump = false
+			velocity.y -= jump_force
+			has_double_jump = true
+		
 	update_facing_direction()
 
 	#Gun facing
